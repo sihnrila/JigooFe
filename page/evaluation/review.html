@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!-- 실서버 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:title" content="지구랭">
+    <meta property="og:description" content="지구랭">
+    <meta property="og:image" content="./resources/logo.png">
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">  
+
+    <title>지구랭</title>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- 탭바 시작 -->
+    <div class="tabar">
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">랭킹</a></li>
+            <li><a href="#">쇼핑</a></li>
+            <li><a href="#">기록</a></li>
+        </ul>
+    </div>
+    <!-- 탭바 끝 -->
+
+    <!-- 헤더 시작-->
+   <div class="header">
+    <div class="top">
+        <div class="logo">
+            <a href="../../index.html"></a>
+            <h1>지구랭</h1>
+        </div>
+
+          <!-- 모바일 메뉴 시작 -->
+          <div class="ham">
+            <a class="btn_ham" onclick="openNav()"><span class="name">햄버거</span></a>
+        </div>
+
+        <div class="background"></div>
+        <div id="Sidenav" class="sidenav"> 
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+              <img src="../../recources/icons/icon-cls.png" alt="">
+            </a>
+
+            <div class="m-menu">
+                <ul class="m-menu-my">
+                    <a href="../../page/login/login.html"><li>로그인<span class="m-menu-my-boder"></span></li></a> 
+                    <!-- <a href="#"><li>로그아웃<span class="m-menu-my-boder"></span></li></a>  -->
+
+                    <a href="../../page/mypage/mypage.html"><li>마이페이지</li></a>
+                </ul>
+
+                <!-- class="on"(버튼 활성)  class="off" (버튼 비활성)-->
+                <ul class="m-menu-child"> 
+                    <a href="#">
+                        <li>지구랭소개</li>
+                    </a>
+                    <a href="#">
+                        <li><b>지</b>구랭 <b>구</b>하는 <b>랭</b>킹 </li>
+                    </a>
+                    <a href="#">
+                        <li><b>지</b>구랭 <b>구</b>하는 <b>쇼핑</b> </li>
+                    </a>
+                    <a href="#">
+                        <li><b>지</b>구랭 <b>구</b>하는 기<b>록</b> </li>
+                    </a>
+                    <a href="../../page/evaluation/evaluation_list.html"><li class="on">정직한 평가단</li></a>
+                    <a href="../../page/mypage/mypage_evaluation_list_service.html"><li>고객센터 </li></a>
+                </ul>
+            </div> 
+        </div> 
+        <!-- 모바일 메뉴 끝 -->
+
+
+        <!-- <ul class="menu">
+            <li class="search"><a href="#"><span>검색</span></a></li>
+            <li class="cart">
+                <a class="conunt"><p id="">0</p></a>
+                <a><span>장바구니</span></a>
+            </li>
+            <li class="my"><a><span>마이페이지</span></a></li>
+            <li class="login"><a href="/page/login/login.html"><span>로그인</span></a></li>
+           <!-- <li class="loginout"><a href=""><span>로그아웃</span></a></li> 
+        </ul> -->
+
+
+            <!-- 오픈전 메뉴 -->
+            <ul class="menu2">
+                <li class="my"><a href="../../page/mypage/mypage.html"><span>마이페이지</span></a></li>
+                <li class="login"><a href="../../page/login/login.html"><span>로그인</span></a></li>
+            <!-- <li class="loginout"><a href=""><span>로그아웃</span></a></li>-->
+            <!-- 로그아웃 -->
+            </ul>
+        </div>
+
+        <!-- class="on"(버튼 활성)  class="off" (버튼 비활성)-->
+        <div class="btm">
+            <ul class="navi">
+                <li><a href="">지구랭 소개</a></li>
+                <li><a href=""><b>지</b>구랭 <b>구</b>하는 <b>랭</b>킹</a></li>
+                <li><a href=""><b>지</b>구랭 <b>구</b>하는 <b>쇼핑</b></a></li>
+                <li><a href=""><b>지</b>구랭 <b>구</b>하는 기<b>록</b></a></li>
+                <li class="on"><a href="../../page/evaluation/evaluation_list.html">정직한 평가단</a></li>
+                <li><a href="../../page/mypage/mypage_evaluation_list_service.html">고객센터</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 헤더 끝 -->
+
+
+
+
+
+
+    <!-- 메인 컨테이너 시작 -->
+    <div class="sub-container">
+        
+        <!-- 위치 시작 -->
+        <div class="location">
+            <ul>
+                <li><a href="../../index.html">홈</a></li>
+                <li><a href="../../page/evaluation/evaluation_list.html">정직한 평가단</a></li>
+            </ul>
+        </div>
+        <!-- 위치 끝 -->
+        
+        <!-- 타이틀 시작 -->
+        <div class="title_area">
+            <h2>정직한 평가단 모집</h2>
+            <div class="text_02 wt-nm">
+                친환경 제품을 무료로 사용가능한 지구랭의 평가단<br>
+                빨리 빨리 신청해 보세요!
+            </div>
+            <div class="line_14-100"></div>
+        </div>
+        <!-- 타이틀 끝 -->
+                
+        <!-- 게시판 시작  -->
+        <div class="eval">
+
+            <div class="board">
+                <!-- 리스트 시작 -->
+                <div class="board_wrap">
+
+                  <fieldset class="rating">
+                      <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                      <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                      <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                      <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                      <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                      <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                      <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                      <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                      <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                      <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                  </fieldset>
+
+
+                  <span class="star">
+                    ★★★★★
+                    <span>★★★★★</span>
+                    <input type="range" oninput="drawStar(this);" value="1" step="1" min="0" max="10">
+                    <p id="value1"></p>
+                  </span>
+
+                  <div class="rating">
+                    ★★★★★
+                    <span>★★★★★</span>
+                  </div>
+                </div>
+
+                <p>
+                <span class="star-rt" oninput="star()">★★★★★</span>
+                </p>
+
+                <div id="box">
+                    <div>★★★★★</div>
+                    <div class="color">★★★★★</div>
+                </div>
+                <!-- 리스트 끝 -->
+            </div>
+
+
+            <div class='RatingStar'>
+              <div class='RatingScore'>
+                <div class='outer-star'>
+                  <div class='inner-star'></div>
+                </div>
+                <p class="numberRating"></p>
+              </div>
+            </div>
+
+            <div class='RatingStar'>
+              <div class='RatingScore'>
+                <div class='outer-star'>
+                  <div class='inner-star'></div>
+                </div>
+                <p class="numberRating"></p>
+              </div>
+            </div>
+
+            <div class='RatingStar'>
+              <div class='RatingScore'>
+                <div class='outer-star'>
+                  <div class='inner-star'></div>
+                </div>
+                <p class="numberRating"></p>
+              </div>
+            </div>
+
+            <div class='RatingStar'>
+              <div class='RatingScore'>
+                <div class='outer-star'>
+                  <div class='inner-star'></div>
+                </div>
+                <p class="numberRating"></p>
+              </div>
+            </div>
+        </div>
+        <!-- 게시판 끝  -->
+
+       
+
+    </div>
+    <!-- 메인 컨테이너 끝 -->
+
+
+<style>
+  @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 3em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #3ec4ba;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #3ec4ba;  } 
+
+.star {
+    position: relative;
+    font-size: 2rem;
+    color: #ddd;
+  }
+  
+  .star input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .star span {
+    width: 0;
+    position: absolute; 
+    left: 0;
+    color: red;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  p { font-size: 30px; }
+
+  .star-rt {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+}
+
+.star-rt:before {
+  content: '★★★★★';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: gray;
+}
+
+.star-rt-ative{
+  content: '★★★★★';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: gold;
+  overflow: hidden;
+}
+
+.star-rt-0:after { width: 0%; }
+.star-rt-1:after { width: 20%; }
+.star-rt-2:after { width: 40%; }
+.star-rt-3:after { width: 60%; }
+.star-rt-4:after { width: 80%; }
+.star-rt-5:after { width: 100%; }
+
+
+.inner-star::before{color: #FF9600;}
+.outer-star {position: relative;display: inline-block;color: #CCCCCC;}
+.inner-star {position: absolute;left: 0;top: 0;width: 0%;overflow: hidden;white-space: nowrap;}
+.outer-star::before, .inner-star::before {content: '★★★★★';font-weight: 900; font-size: 30px;}
+
+</style>
+
+
+    
+
+
+    <!-- 푸터 시작 -->
+    <div class="footer">
+      <div class="head">
+          <ul>
+              <li><a href="">이용약관</a></li>
+              <li><a href="">개인정보처리방침</a></li>
+          </ul>
+      </div>
+      <div class="bottom">
+          <div class="con_01">
+              <div class="title">지구랭</div>
+              <ul>
+                  <li>대표이사 : 유혜연</li>
+                  <li>사업자등록번호 : 397-05-01970</li>
+                  <li>통신판매업신고 :제 2021-서울마포-3124 호</li>
+                  <li>개인정보관리책임자 : 유혜연</li>
+              </ul>
+          </div>
+          <div class="con_01">
+              <div class="title">CONTACT US</div>
+              <ul>
+                  <!-- <li>대표전화 : 02-1234-1235</li> -->
+                  <li>서울시 마포구 월드컵북로 361 14층 11호 
+                      <br>(상암동, DMC이안오피스텔) 
+                  </li>
+                  <li>이메일 : jigoorang_hehe@naver.com</li>
+              </ul>
+          </div>
+          <div class="logo_f"></div>
+          <div class="copy">ⓒ JIGOORANG ALL RIGHTS RESERVED</div>              
+      </div>
+  </div>
+  <!-- 푸터 끝 -->
+
+</div>
+<script src="../../js/sidenav.js"></script>
+<script>
+  
+   const drawStar = (target) => {
+    document.querySelector(`.star span`).style.width = `${target.value * 10} %`;
+  }
+
+ratings = {
+  RatingScore: 4.5
+
+} 
+
+totalRating = 5;
+table = document.querySelector('.RatingStar');
+
+function rateIt() {
+  for (rating in ratings) {
+    ratingPercentage = ratings[rating] / totalRating * 100;
+    ratingRounded = Math.round(ratingPercentage / 10) * 10 + '%';
+    star = table.querySelector(`.${rating} .inner-star`);
+    numberRating = table.querySelector(`.${rating} .numberRating`);
+    star.style.width = ratingRounded;
+    numberRating.innerText = ratings[rating];}
+
+}
+rateIt()
+
+
+</script>
+</script>
+</body>
+</html>
